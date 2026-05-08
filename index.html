@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farewell Meena Mam | 10th E</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <audio id="netflix-sound" src="https://www.soundjay.com/buttons/beep-01a.mp3"></audio> <audio id="click-sound" src="https://www.soundjay.com/buttons/button-16.mp3"></audio>
+    <audio id="emotional-song" src="emotional-song.mp3" loop></audio>
+
+    <div id="intro-screen" class="intro-overlay">
+        <div class="netflix-animation">
+            <span class="n-letter">N</span>
+            <h1 class="full-logo">NETFLIX</h1>
+        </div>
+    </div>
+
+    <div id="profile-screen" class="hidden">
+        <div class="profile-container">
+            <h1 class="who-watching">Who's watching?</h1>
+            <div class="profile-gate">
+                <div class="profile-card" onclick="openSection('memories-vid')">
+                    <div class="img-wrapper"><img src="memories.jpg" alt="Memories"></div>
+                    <p>Best Memories ♾️</p>
+                </div>
+                <div class="profile-card" onclick="openSection('meena-para')">
+                    <div class="img-wrapper"><img src="meenamam.jpg" alt="Meena Mam"></div>
+                    <p>For Meena Mam ❤️</p>
+                </div>
+                <div class="profile-card" onclick="openSection('class-vid')">
+                    <div class="img-wrapper"><img src="10e.jpg" alt="10th E"></div>
+                    <p>Our 10th E 😍</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <main id="main-content" class="hidden">
+        <button class="back-btn" onclick="closeSection()">← Back</button>
+
+        <section id="memories-vid" class="content-section hidden">
+            <video id="v1" controls>
+                <source src="video1.mp4" type="video/mp4">
+            </video>
+        </section>
+
+        <section id="meena-para" class="content-section hidden">
+            <div class="emotional-container">
+                <h2 class="stylish-title">To Our Dearest Meena Mam</h2>
+                <div class="para-card">
+                    <p class="emotional-text">
+                        These past two years have been more than just classes; they’ve been a journey of laughter, growth, and guidance. You didn’t just teach us lessons; you made us feel at home. From the fun moments in 10th E to the wisdom you shared, every second is etched in our hearts. We aren't just leaving a school; we are carrying a piece of your kindness with us. We will miss you more than words can say.
+                    </p>
+                    <p class="signature">- With Love, Your 10th E Batch</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="class-vid" class="content-section hidden">
+            <video id="v2" controls>
+                <source src="video2.mp4" type="video/mp4">
+            </video>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
