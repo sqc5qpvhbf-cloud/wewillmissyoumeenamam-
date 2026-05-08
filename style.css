@@ -1,0 +1,145 @@
+:root {
+    --netflix-red: #E50914;
+    --black: #000000;
+    --dark-grey: #141414;
+}
+
+body {
+    background-color: var(--black);
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    overflow: hidden;
+}
+
+/* Intro Animation */
+.intro-overlay {
+    height: 100vh;
+    background: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+    position: fixed;
+    width: 100%;
+}
+
+.n-letter {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 8rem;
+    color: var(--netflix-red);
+    animation: zoomLetter 2s forwards ease-in;
+}
+
+.full-logo {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 5rem;
+    color: var(--netflix-red);
+    display: none;
+    letter-spacing: 5px;
+}
+
+@keyframes zoomLetter {
+    0% { transform: scale(1); opacity: 0; }
+    50% { opacity: 1; transform: scale(1.2); }
+    100% { transform: scale(50); opacity: 0; }
+}
+
+/* Profile Screen */
+.profile-container {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    animation: fadeIn 1s ease-in;
+}
+
+.who-watching {
+    font-size: 3.5rem;
+    margin-bottom: 2rem;
+    font-weight: 400;
+}
+
+.profile-gate {
+    display: flex;
+    gap: 30px;
+}
+
+.profile-card {
+    width: 160px;
+    text-align: center;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.img-wrapper {
+    width: 160px;
+    height: 160px;
+    border-radius: 4px;
+    overflow: hidden;
+    border: 3px solid transparent;
+}
+
+.img-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.profile-card:hover { transform: scale(1.1); }
+.profile-card:hover .img-wrapper { border-color: white; }
+.profile-card p { color: grey; margin-top: 15px; font-size: 1.2rem; }
+.profile-card:hover p { color: white; }
+
+/* Emotional Section */
+.emotional-container {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.stylish-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 4rem;
+    color: var(--netflix-red);
+    text-shadow: 0 0 10px rgba(229, 9, 20, 0.5);
+}
+
+.para-card {
+    max-width: 800px;
+    margin: 0 auto;
+    background: rgba(20, 20, 20, 0.8);
+    padding: 40px;
+    border-radius: 15px;
+    border: 1px solid var(--netflix-red);
+}
+
+.emotional-text {
+    font-size: 1.3rem;
+    line-height: 1.8;
+    color: #ffffff;
+    font-style: italic;
+}
+
+video {
+    width: 80%;
+    max-width: 900px;
+    display: block;
+    margin: 20px auto;
+    border: 2px solid var(--netflix-red);
+}
+
+.back-btn {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    background: var(--netflix-red);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    z-index: 100;
+}
+
+.hidden { display: none !important; }
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
